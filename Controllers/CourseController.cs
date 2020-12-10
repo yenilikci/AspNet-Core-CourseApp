@@ -18,6 +18,12 @@ namespace CourseApp.Controllers
             return View();
         }
 
+        //başvuru formu için - localhost:5000/course/apply
+        public IActionResult Apply()
+        {
+            return View();
+        }
+
         public IActionResult Details()
         {
             //name: Core Mvc Kursu

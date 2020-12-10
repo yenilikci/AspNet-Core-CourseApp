@@ -1,0 +1,32 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Course/Apply</title>
+</head>
+<body>
+    <form action="/course/apply">
+
+        <p>
+            <label for="name">Adınız</label>
+            <input type="text" name="name"/>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email"/>
+        </p>
+        <p>
+            <label for="phone">Telefon</label>
+            <input type="text" name="phone"/>
+        </p>
+        <p>
+            <label for="confirm">Kursa Katılacak Mısınız</label>
+            <select name="confirm">
+                <option value="true">Evet</option>
+                <option value="false">Hayır</option>
+            </select>
+        </p>
+
+
+        <input type="button" value="Submit" />
+    </form>
+</body>
+</html>

@@ -38,3 +38,4 @@ C:\Users\melih\source\repos\CourseApp\CourseApp\obj\Debug\netcoreapp3.1\Razor\Vi
 C:\Users\melih\source\repos\CourseApp\CourseApp\obj\Debug\netcoreapp3.1\Razor\Views\Course\Index.cshtml.g.cs
 C:\Users\melih\source\repos\CourseApp\CourseApp\obj\Debug\netcoreapp3.1\Razor\Views\Course\List.cshtml.g.cs
 C:\Users\melih\source\repos\CourseApp\CourseApp\obj\Debug\netcoreapp3.1\Razor\Views\Course\Details.cshtml.g.cs
+C:\Users\melih\source\repos\CourseApp\CourseApp\obj\Debug\netcoreapp3.1\Razor\Views\Course\Apply.cshtml.g.cs
