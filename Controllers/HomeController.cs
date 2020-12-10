@@ -14,6 +14,13 @@ namespace CourseApp.Controllers
         //localhost:5000/home/index => home/index.cshtml
         public IActionResult Index()
         {
+            int saat = DateTime.Now.Hour;
+
+            //ViewBag içerisinde değişken tanımlama
+            ViewBag.Greeting = saat < 12 ? "Günaydın" : "İyi Günler";
+
+            ViewBag.UserName = "Melih";
+
             return View();
         }
 
