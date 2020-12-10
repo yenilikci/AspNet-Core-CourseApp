@@ -28,10 +28,14 @@ namespace CourseApp.Controllers
         //localhost:5000/course/apply method:POST
         // Name=value&Email=value&Phone=value&Confirm=value
         [HttpPost]
-        public IActionResult Apply(string Name,string Email,string Phone,bool Confirm)
+        //string Name,string Email,string Phone,bool Confirm
+        public IActionResult Apply(Student student) //Model Binding
         {
+
             //database kayıt
-            return View();
+            Repository.AddStudent(student);
+
+            return View("Thanks",student);
         }
 
         public IActionResult Details()

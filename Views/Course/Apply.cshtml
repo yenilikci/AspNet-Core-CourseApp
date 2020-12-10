@@ -22,13 +22,14 @@
         <p>
             <label asp-for="Confirm">Kursa Katılacak Mısınız</label>
             <select asp-for="Confirm">
+                <option value="">Seçiniz</option>
                 <option value="true">Evet</option>
                 <option value="false">Hayır</option>
             </select>
         </p>
 
 
-        <input type="button" value="Submit" />
+        <button type="submit">Gönder</button>
     </form>
 </body>
 </html>
