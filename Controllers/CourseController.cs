@@ -11,16 +11,16 @@ namespace CourseApp.Controllers
     {
         //action methods
 
-        //localhost:5000/course/index
-        public string Index()
+        //localhost:5000/course/index => course/index.cshtml
+        public IActionResult Index()
         {
-            return "course/index";
+            return View();
         }
 
-        //localhost:5000/course/list
-        public string List()
+        //localhost:5000/course/list => course/list.cshtml
+        public IActionResult List()
         {
-            return "course/list";
+            return View();
         }
 
     }

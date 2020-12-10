@@ -11,27 +11,16 @@ namespace CourseApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+        //localhost:5000/home/index => home/index.cshtml
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        //localhost:5000/home/about => home/about.cshtml
+        public IActionResult About()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
