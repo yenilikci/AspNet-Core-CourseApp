@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CourseApp.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,22 @@ namespace CourseApp.Controllers
         {
             return View();
         }
+
+        public IActionResult Details()
+        {
+            //name: Core Mvc Kursu
+            //description: Faydalı bir kurstur.
+            //isPublished: true
+
+            //model nesnesi
+            var course = new Course();
+            course.Name = "Core Mvc Kursu";
+            course.Description = "Faydalı bir kurstur.";
+            course.isPublished = true;
+
+            return View(course);
+        }
+
 
         //localhost:5000/course/list => course/list.cshtml
         public IActionResult List()
