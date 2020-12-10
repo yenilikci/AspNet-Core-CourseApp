@@ -1,25 +1,27 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model Student
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Course/Apply</title>
 </head>
 <body>
-    <form action="/course/apply">
+    <form asp-action="apply" method="post">
 
         <p>
-            <label for="name">Adınız</label>
-            <input type="text" name="name"/>
+            <label asp-for="Name">Adınız</label>
+            <input asp-for="Name"/>
         </p>
         <p>
-            <label for="email">Email</label>
-            <input type="email" name="email"/>
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email"/>
         </p>
         <p>
-            <label for="phone">Telefon</label>
-            <input type="text" name="phone"/>
+            <label asp-for="Phone">Telefon</label>
+            <input asp-for="Phone"/>
         </p>
         <p>
-            <label for="confirm">Kursa Katılacak Mısınız</label>
-            <select name="confirm">
+            <label asp-for="Confirm">Kursa Katılacak Mısınız</label>
+            <select asp-for="Confirm">
                 <option value="true">Evet</option>
                 <option value="false">Hayır</option>
             </select>

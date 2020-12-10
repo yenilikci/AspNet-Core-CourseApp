@@ -19,8 +19,18 @@ namespace CourseApp.Controllers
         }
 
         //başvuru formu için - localhost:5000/course/apply
+        [HttpGet]
         public IActionResult Apply()
         {
+            return View();
+        }
+
+        //localhost:5000/course/apply method:POST
+        // Name=value&Email=value&Phone=value&Confirm=value
+        [HttpPost]
+        public IActionResult Apply(string Name,string Email,string Phone,bool Confirm)
+        {
+            //database kayıt
             return View();
         }
 
