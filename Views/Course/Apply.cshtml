@@ -3,33 +3,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Course/Apply</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <form asp-action="apply" method="post">
-        <div asp-validation-summary="All"></div>
-        <p>
-            <label asp-for="Name">Adınız</label>
-            <input asp-for="Name"/>
-        </p>
-        <p>
-            <label asp-for="Email">Email</label>
-            <input asp-for="Email"/>
-        </p>
-        <p>
-            <label asp-for="Phone">Telefon</label>
-            <input asp-for="Phone"/>
-        </p>
-        <p>
-            <label asp-for="Confirm">Kursa Katılacak Mısınız</label>
-            <select asp-for="Confirm">
-                <option value="">Seçiniz</option>
-                <option value="true">Evet</option>
-                <option value="false">Hayır</option>
-            </select>
-        </p>
+
+    <div class="container m-4">
+        <div class="card mx-auto" style="width:500px;">
+            <div class="card-header">
+                <p>Başvuru Formu</p>
+            </div>
+            <div class="card-body">
+                <form asp-action="apply" method="post">
+                    <div asp-validation-summary="All"></div>
+                    <div class="form-group">
+                        <label asp-for="Name">Adınız</label>
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email">Email</label>
+                        <input asp-for="Email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone">Telefon</label>
+                        <input asp-for="Phone" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Confirm">Kursa Katılacak Mısınız</label>
+                        <select asp-for="Confirm" class="form-control">
+                            <option value="">Seçiniz</option>
+                            <option value="true">Evet</option>
+                            <option value="false">Hayır</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
-        <button type="submit">Gönder</button>
-    </form>
+
 </body>
 </html>

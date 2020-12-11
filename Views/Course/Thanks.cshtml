@@ -3,18 +3,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Course/Thanks</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <h2>Merhaba, @Model.Name</h2>
-    <hr />
-    @if (Model.Confirm == true)
-    {
-        <span>Kursa katılmış olduğunuza çok sevindik.</span>
-        <span>Diğer katılımcıları <a asp-action="List" >görüntüle</a></span>
-    }
-    else
-    {
-        <span>Umarım fikriniz değişir</span>
-    }
+
+      <div class="container m-4">
+        <div class="card mx-auto" style="width:500px;">
+            <div class="card-header">
+                <h2>Merhaba, @Model.Name</h2>
+            </div>
+            <div class="card-body">
+                @if (Model.Confirm == true)
+                {
+                    <span>Kursa katılmış olduğunuza çok sevindik.</span>
+                    <span>Diğer katılımcıları <a asp-action="List" class="btn btn-primary">görüntüle</a></span>
+                }
+                else
+                {
+                    <span>Umarım fikriniz değişir</span>
+                }
+            </div>
+        </div>
+    </div>
+   
 </body>
 </html>
