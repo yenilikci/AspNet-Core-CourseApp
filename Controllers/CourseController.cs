@@ -57,7 +57,9 @@ namespace CourseApp.Controllers
         //localhost:5000/course/list => course/list.cshtml
         public IActionResult List()
         {
-            return View();
+            //Confirm alanı true olanların filtrelenmesi
+            var students = Repository.Students.Where(i => i.Confirm == true);
+            return View(students);
         }
 
     }
