@@ -6,7 +6,7 @@
 </head>
 <body>
     <form asp-action="apply" method="post">
-
+        <div asp-validation-summary="All"></div>
         <p>
             <label asp-for="Name">Adınız</label>
             <input asp-for="Name"/>
